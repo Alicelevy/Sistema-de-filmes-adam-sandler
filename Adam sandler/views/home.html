@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Início | Adam Sandler</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #111;
+            color: white;
+        }
+
+        nav {
+            height: 70px;
+            padding: 0 8%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: #181818;
+            border-bottom: 1px solid #292929;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #e50914;
+        }
+
+        .logout {
+            color: #aaa;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .logout:hover {
+            color: #e50914;
+        }
+
+        main {
+            min-height: calc(100vh - 70px);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        .welcome {
+            max-width: 700px;
+        }
+
+        .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        h1 span {
+            color: #e50914;
+        }
+
+        p {
+            color: #aaa;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            margin-top: 35px;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            background: #e50914;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #b20710;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            🎬 <span>Adam</span> Sandler
+        </div>
+
+        <a
+            class="logout"
+            href="{{ url_for('auth.logout') }}"
+        >
+            Sair
+        </a>
+
+    </nav>
+
+    <main>
+
+        <div class="welcome">
+
+            <div class="icon">🍿</div>
+
+            <h1>
+                Bem-vindo, <span>{{ usuario }}</span>!
+            </h1>
+
+            <p>
+                Explore filmes, descubra recomendações
+                e compartilhe suas avaliações sobre
+                Adam Sandler.
+            </p>
+
+            <div class="buttons">
+                <a href="#" class="button">
+                    Explorar filmes
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
